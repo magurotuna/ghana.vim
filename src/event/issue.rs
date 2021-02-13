@@ -1,7 +1,12 @@
 use crate::event::EventHandler;
 
 pub trait Issue {
+    fn list_issue(&self);
+}
+
+impl Issue for EventHandler {
     fn list_issue(&self) {
-        print!("Hello");
+        // able to access to self.client
+        let _c = &self.client;
     }
 }

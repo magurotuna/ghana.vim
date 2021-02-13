@@ -27,7 +27,6 @@ pub struct EventHandler {
     client: GitHub,
 }
 
-impl issue::Issue for EventHandler {}
 impl EventHandler {
     pub fn new() -> EventHandler {
         let session = Session::new_parent().unwrap();
